@@ -12,9 +12,9 @@ class XmlToolTest {
     @Test
     void failsWithJackson210() throws Exception {
         String xml =
-                "<Silly xmlns:a=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:i=\"http://www.w3.org/2001/XMLSchema-instance\">\n" +
-                "  <a:Hey i:nil=\"true\"/>\n" +
-                "  <a:Ho>to</a:Ho>\n" +
+                "<Silly xmlns:a=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:i=\"http://www.w3.org/2001/XMLSchema-instance\">" +
+                "  <a:Hey i:nil=\"true\"/>" +
+                "  <a:Ho>to</a:Ho>" +
                 "</Silly>";
 
         Silly silly = tool.parseXml(xml);
@@ -26,9 +26,9 @@ class XmlToolTest {
     @Test
     void doesNotFailWithJackson210() throws Exception {
         String xml =
-                "<Silly xmlns:a=\"http://www.w3.org/cheese\" xmlns:i=\"http://www.w3.org/cheese\">\n" +
-                "  <a:Hey i:nil=\"true\"/>\n" +
-                "  <a:Ho>to</a:Ho>\n" +
+                "<Silly xmlns:a=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:i=\"http://www.w3.org/cheese\">" +
+                "  <a:Hey i:nil=\"true\"/>" +
+                "  <a:Ho>to</a:Ho>" +
                 "</Silly>";
 
         Silly silly = tool.parseXml(xml);
