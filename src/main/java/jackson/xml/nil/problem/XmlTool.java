@@ -77,6 +77,14 @@ public class XmlTool {
         public int hashCode() {
             return Objects.hash(hey, ho);
         }
+
+        @Override
+        public String toString() {
+            return "Silly{" +
+                    "hey='" + hey + '\'' +
+                    ", ho='" + ho + '\'' +
+                    '}';
+        }
     }
 }
 
