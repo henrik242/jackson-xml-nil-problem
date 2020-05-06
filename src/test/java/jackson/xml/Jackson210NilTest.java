@@ -1,11 +1,11 @@
-package jackson.xml.nil.problem;
+package jackson.xml;
 
-import jackson.xml.nil.problem.XmlTool.Silly;
+import jackson.xml.XmlTool.Silly;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class XmlToolTest {
+class Jackson210NilTest {
 
     XmlTool tool = new XmlTool();
 
