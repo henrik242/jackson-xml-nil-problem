@@ -5,6 +5,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ * Test project for Jackson issue #378: https://github.com/FasterXML/jackson-dataformat-xml/issues/378
+ */
 class Jackson210NilTest {
 
     XmlTool tool = new XmlTool();
