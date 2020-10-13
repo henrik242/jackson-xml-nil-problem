@@ -1,20 +1,22 @@
 plugins {
-    `java-library`
+    `kotlin-dsl`
 }
 
 repositories {
     jcenter()
 }
 
+//val jacksonVersion = "2.11.3"  // succeeds
+val jacksonVersion = "2.12.0-rc1"  //fails
+
+val junitVersion = "5.5.1"
+
 dependencies {
-    // Fails with 2.10.1
-    implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.10.1")
+    implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-xml:$jacksonVersion")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:$jacksonVersion")
 
-    // Succeeds with 2.9.9
-    //implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.9.9")
-
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.5.1")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.5.1")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:$junitVersion")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:$junitVersion")
 }
 
 val test by tasks.getting(Test::class) {
