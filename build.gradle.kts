@@ -7,7 +7,7 @@ repositories {
 }
 
 //val jacksonVersion = "2.11.3"  // succeeds
-val jacksonVersion = "2.12.0-rc1"  //fails
+val jacksonVersion = "2.12.0"  //fails
 
 val junitVersion = "5.5.1"
 
