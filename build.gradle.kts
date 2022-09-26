@@ -6,7 +6,7 @@ repositories {
     mavenCentral()
 }
 
-val jacksonVersion = "2.12.3"
+val jacksonVersion = "2.14.0-rc1"
 val junitVersion = "5.5.1"
 
 dependencies {

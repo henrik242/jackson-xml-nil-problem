@@ -13,7 +13,7 @@ object XmlTool {
     val xmlModule = JacksonXmlModule()
     val mapper = XmlMapper(factory, xmlModule)
         .registerKotlinModule()
-        .configure(DeserializationFeature.ACCEPT_EMPTY_STRING_AS_NULL_OBJECT, true) // Doesn't make any difference
+        //.configure(DeserializationFeature.ACCEPT_EMPTY_STRING_AS_NULL_OBJECT, true) // Doesn't make any difference
 
     @JvmStatic
     fun parseRoot(xml: String?): Root = mapper.readValue(xml, Root::class.java)
